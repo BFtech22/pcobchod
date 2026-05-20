@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PCObchod Rumburk – IT servis, opravy mobilů, telefonů, počítačů a notebooků. Apple a Android servis. Tř. 9. května 853/32, Rumburk.">
+    <meta name="theme-color" content="#c8181a">
     <title>PCObchod Rumburk – IT servis, opravy mobilů a počítačů</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,17 +34,21 @@
 
     <section class="hero">
         <div class="container hero-inner hero-centered">
-            <div class="hero-text">
-                <span class="eyebrow">IT servis Rumburk</span>
+            <div class="hero-text" data-reveal>
+                <span class="eyebrow">IT servis Rumburk &amp; Varnsdorf</span>
                 <h1>Opravy mobilů, počítačů a notebooků <span class="accent">na jednom místě</span></h1>
                 <p class="lead">Profesionální servis Apple i Android zařízení, diagnostika a opravy stolních PC i notebooků. Rychle, férově, s zárukou.</p>
                 <div class="hero-cta">
-                    <a href="#kontakt" class="btn btn-primary">Objednat opravu</a>
+                    <a href="#kontakt" class="btn btn-primary">
+                        Objednat opravu
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
                     <a href="#sluzby" class="btn btn-ghost">Naše služby</a>
                 </div>
                 <ul class="hero-meta">
                     <li><strong>15+</strong><span>let zkušeností</span></li>
                     <li><strong>24 h</strong><span>expresní servis</span></li>
+                    <li><strong>98 %</strong><span>spokojených klientů</span></li>
                 </ul>
             </div>
         </div>
@@ -48,14 +56,14 @@
 
     <section class="section" id="sluzby">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-reveal>
                 <span class="eyebrow">Co opravujeme</span>
                 <h2>Servis, na který se můžete spolehnout</h2>
                 <p>Specializujeme se na opravy mobilních telefonů, tabletů, počítačů a notebooků. Pracujeme s originálními i kvalitními alternativními díly.</p>
             </div>
 
             <div class="grid grid-3">
-                <article class="service-card service-card-image">
+                <article class="service-card service-card-image" data-reveal>
                     <div class="service-image">
                         <img src="img/service-apple.png" alt="Apple servis – iPhone, iPad, MacBook">
                     </div>
@@ -65,7 +73,7 @@
                     </div>
                 </article>
 
-                <article class="service-card service-card-image">
+                <article class="service-card service-card-image" data-reveal style="--reveal-delay: 100ms">
                     <div class="service-image">
                         <img src="img/service-android.png" alt="Android servis – Samsung, Xiaomi, Huawei">
                     </div>
@@ -75,7 +83,7 @@
                     </div>
                 </article>
 
-                <article class="service-card service-card-image">
+                <article class="service-card service-card-image" data-reveal style="--reveal-delay: 200ms">
                     <div class="service-image">
                         <img src="img/service-it.png" alt="IT servis – počítače a notebooky">
                     </div>
@@ -90,28 +98,28 @@
 
     <section class="section section-alt">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-reveal>
                 <span class="eyebrow">Jak to funguje</span>
                 <h2>Od poruchy k opravenému zařízení ve 4 krocích</h2>
             </div>
 
             <ol class="steps">
-                <li>
+                <li data-reveal>
                     <span class="step-num">1</span>
                     <h3>Přinesete zařízení</h3>
                     <p>Stavte se na pobočce v Rumburku nebo nás předem kontaktujte telefonicky.</p>
                 </li>
-                <li>
+                <li data-reveal style="--reveal-delay: 100ms">
                     <span class="step-num">2</span>
                     <h3>Bezplatná diagnostika</h3>
                     <p>Zjistíme závadu a zašleme nezávazný cenový odhad – obvykle do 24 hodin.</p>
                 </li>
-                <li>
+                <li data-reveal style="--reveal-delay: 200ms">
                     <span class="step-num">3</span>
                     <h3>Oprava se zárukou</h3>
                     <p>Po vašem odsouhlasení provedeme opravu. Na práci i díly poskytujeme záruku.</p>
                 </li>
-                <li>
+                <li data-reveal style="--reveal-delay: 300ms">
                     <span class="step-num">4</span>
                     <h3>Vyzvednutí</h3>
                     <p>Dáme vědět, jakmile je hotovo. Platíte až při převzetí funkčního zařízení.</p>
@@ -123,14 +131,14 @@
     <section class="section" id="o-nas">
         <div class="container">
             <div class="split">
-                <div class="split-text">
+                <div class="split-text" data-reveal>
                     <span class="eyebrow">O nás</span>
                     <h2>Lokální IT servis s přístupem člověka, ne korporace</h2>
                     <p>PCObchod v Rumburku provozuje PhDr. Jan Böhme. Přes 15 let pomáháme lidem ze Šluknovského výběžku s jejich počítači, notebooky a mobilními telefony.</p>
                     <p>Původně jsme provozovali e-shop s počítačovou technikou. Postupně jsme zjistili, že lidé v regionu potřebují především spolehlivý servis – někoho, komu mohou přinést rozbitý mobil nebo pomalý notebook a dostanou férovou cenu i lidský přístup.</p>
                     <p>Dnes se věnujeme výhradně opravám a IT podpoře. Děláme to, co umíme nejlíp.</p>
                 </div>
-                <div class="split-card">
+                <div class="split-card" data-reveal style="--reveal-delay: 150ms">
                     <h4>V číslech</h4>
                     <ul class="stats-list">
                         <li><strong>15+</strong><span>let na trhu</span></li>
@@ -144,20 +152,23 @@
 
     <section class="section section-alt" id="kontakt">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-reveal>
                 <span class="eyebrow">Naše pobočky</span>
                 <h2>Najdete nás v Rumburku i ve Varnsdorfu</h2>
                 <p>Diagnostika je zdarma a obvykle ji zvládneme do 24 hodin. Stavte se nebo zavolejte – rádi poradíme.</p>
             </div>
 
             <div class="branches">
-                <article class="branch-card">
+                <article class="branch-card" data-reveal>
                     <header class="branch-head">
                         <h3>Rumburk</h3>
+                        <span class="branch-badge">Hlavní pobočka</span>
                     </header>
 
                     <div class="branch-row">
-                        <div class="branch-icon">📍</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
                         <div>
                             <strong>Adresa</strong>
                             <p>Tř. 9. května 853/32<br>408 01 Rumburk</p>
@@ -165,7 +176,9 @@
                     </div>
 
                     <div class="branch-row">
-                        <div class="branch-icon">📞</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
                         <div>
                             <strong>Kontakt</strong>
                             <p><a href="tel:+420777226328">777 226 328</a><br>
@@ -174,7 +187,9 @@
                     </div>
 
                     <div class="branch-row">
-                        <div class="branch-icon">🕐</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
                         <div>
                             <strong>Otevírací doba</strong>
                             <p>Po–Pá: 8:00–12:00 · 12:45–17:00<br>So: 9:00–11:00</p>
@@ -195,13 +210,16 @@
                     </div>
                 </article>
 
-                <article class="branch-card">
+                <article class="branch-card" data-reveal style="--reveal-delay: 150ms">
                     <header class="branch-head">
                         <h3>Varnsdorf</h3>
+                        <span class="branch-badge">Pobočka</span>
                     </header>
 
                     <div class="branch-row">
-                        <div class="branch-icon">📍</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
                         <div>
                             <strong>Adresa</strong>
                             <p>Národní 1751<br>407 47 Varnsdorf</p>
@@ -209,7 +227,9 @@
                     </div>
 
                     <div class="branch-row">
-                        <div class="branch-icon">📞</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
                         <div>
                             <strong>Kontakt</strong>
                             <p><a href="tel:+420606888846">606 88 88 46</a><br>
@@ -218,7 +238,9 @@
                     </div>
 
                     <div class="branch-row">
-                        <div class="branch-icon">🕐</div>
+                        <div class="branch-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
                         <div>
                             <strong>Otevírací doba</strong>
                             <p>Po–Pá: 9:00–12:00 · 12:45–17:00<br>So: 9:00–11:00</p>
@@ -245,13 +267,13 @@
     <section class="section section-alt">
         <div class="container">
             <div class="form-wrap">
-                <div class="form-text">
+                <div class="form-text" data-reveal>
                     <span class="eyebrow">Objednat opravu</span>
                     <h2>Napište nám, co potřebujete</h2>
                     <p>Vyplňte formulář a my se vám ozveme zpět – obvykle během několika hodin v pracovní době.</p>
                 </div>
 
-                <form class="form" novalidate>
+                <form class="form" novalidate data-reveal style="--reveal-delay: 150ms">
                     <div class="form-row">
                         <label>
                             <span>Jméno a příjmení *</span>
@@ -285,7 +307,10 @@
                         <input type="checkbox" required>
                         <span>Souhlasím se zpracováním osobních údajů pro účely vyřízení dotazu.</span>
                     </label>
-                    <button type="submit" class="btn btn-primary">Odeslat poptávku</button>
+                    <button type="submit" class="btn btn-primary">
+                        Odeslat poptávku
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
                     <p class="form-note">Tento formulář je demo – pro reálné použití je potřeba napojit backend nebo službu jako Formspree.</p>
                 </form>
             </div>
@@ -294,14 +319,20 @@
 
     <section class="section">
         <div class="container">
-            <div class="cta-box">
+            <div class="cta-box" data-reveal>
                 <div>
                     <h2>Potřebujete poradit?</h2>
                     <p>Zavolejte nám a popište, co se s vaším zařízením děje. Cenový odhad je vždy zdarma.</p>
                 </div>
                 <div class="cta-actions">
-                    <a href="tel:+420777226328" class="btn btn-primary">📞 777 226 328</a>
-                    <a href="mailto:info@pcobchod.com" class="btn btn-ghost">✉️ info@pcobchod.com</a>
+                    <a href="tel:+420777226328" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        777 226 328
+                    </a>
+                    <a href="mailto:info@pcobchod.com" class="btn btn-ghost">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        info@pcobchod.com
+                    </a>
                 </div>
             </div>
         </div>
