@@ -439,10 +439,7 @@ p { color: var(--text-muted); }
 }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
-.grid-services { grid-template-columns: repeat(6, 1fr); }
-.grid-services > article { grid-column: span 2; }
-.grid-services > article:nth-child(4) { grid-column: 2 / span 2; }
-.grid-services > article:nth-child(5) { grid-column: 4 / span 2; }
+.grid-services { grid-template-columns: repeat(3, 1fr); }
 
 .service-card,
 .value-card {
@@ -1057,9 +1054,6 @@ p { color: var(--text-muted); }
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .grid-services { grid-template-columns: repeat(2, 1fr); }
-    .grid-services > article,
-    .grid-services > article:nth-child(4),
-    .grid-services > article:nth-child(5) { grid-column: auto; }
     .steps { grid-template-columns: repeat(2, 1fr); }
     .steps::before { display: none; }
     .split, .form-wrap { grid-template-columns: 1fr; gap: 2rem; }
