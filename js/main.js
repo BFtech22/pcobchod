@@ -89,25 +89,45 @@
     sections.forEach(function (s) { observer.observe(s); });
 })();
 
-// Demo form handler
+// Web3Forms AJAX submission
 (function () {
     const form = document.querySelector('.form');
-    if (!form) return;
+    if (!form || !form.action) return;
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
         const button = form.querySelector('button[type="submit"]');
         const original = button.innerHTML;
+        const origBg = button.style.background;
+        const origShadow = button.style.boxShadow;
         button.disabled = true;
-        button.innerHTML = '✓ Odesláno – děkujeme!';
-        button.style.background = '#16a34a';
-        button.style.boxShadow = 'none';
-        form.reset();
+        button.innerHTML = 'Odesílám…';
+
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            const data = await res.json().catch(() => ({}));
+            if (res.ok && data.success !== false) {
+                button.innerHTML = '✓ Odesláno – děkujeme!';
+                button.style.background = '#16a34a';
+                button.style.boxShadow = 'none';
+                form.reset();
+            } else {
+                throw new Error(data.message || 'send failed');
+            }
+        } catch (err) {
+            button.innerHTML = 'Chyba odeslání – zkuste znovu';
+            button.style.background = '#9c0f11';
+        }
+
         setTimeout(function () {
             button.disabled = false;
             button.innerHTML = original;
-            button.style.background = '';
-            button.style.boxShadow = '';
-        }, 3500);
+            button.style.background = origBg;
+            button.style.boxShadow = origShadow;
+        }, 4500);
     });
 })();
