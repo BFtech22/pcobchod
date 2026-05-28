@@ -1067,7 +1067,10 @@ p { color: var(--text-muted); }
     .nav-toggle { display: flex; }
     .header-inner { height: 72px; }
     .logo img { height: 54px; }
-    .header-social { display: none; }
+    .header-left { gap: 0.6rem; }
+    .header-social { gap: 0.35rem; }
+    .header-social .social-btn { width: 36px; height: 36px; }
+    .header-social .social-btn svg { width: 16px; height: 16px; }
     .nav {
         position: absolute;
         top: 72px; left: 0; right: 0;
