@@ -6,7 +6,11 @@
     <meta name="description" content="PCObchod Rumburk – IT servis, opravy mobilů, telefonů, počítačů a notebooků. Apple a Android servis. Tř. 9. května 853/32, Rumburk.">
     <meta name="theme-color" content="#c8181a">
     <title>PCObchod Rumburk – IT servis, opravy mobilů a počítačů</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
@@ -53,7 +57,6 @@
                         Objednat opravu
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                     </a>
-                    <a href="#sluzby" class="btn btn-ghost">Naše služby</a>
                 </div>
             </div>
             <aside class="hero-aside" data-reveal style="--reveal-delay: 120ms">
@@ -81,7 +84,7 @@
                     </div>
                     <div class="service-body">
                         <h3>Apple servis</h3>
-                        <p>iPhone, iPad i MacBook. Specializujeme se na opravy bez ztráty dat a s originálními díly.</p>
+                        <p>iPhone, iPad i MacBook – specializujeme se na práci s kvalitními alternativními díly včetně konfigurace, a to za zlomek ceny opravy oproti autorizovanému servisu.</p>
                     </div>
                 </article>
 
@@ -91,7 +94,7 @@
                     </div>
                     <div class="service-body">
                         <h3>Android servis</h3>
-                        <p>Samsung, Xiaomi, Huawei, Honor, OnePlus a další. Software i hardware opravy.</p>
+                        <p>Samsung, Xiaomi, Honor, Motorola a další. Opravy hardwaru i softwaru a pomoc s přenosem dat do nového telefonu.</p>
                     </div>
                 </article>
 
@@ -101,7 +104,7 @@
                     </div>
                     <div class="service-body">
                         <h3>IT servis</h3>
-                        <p>Počítače, notebooky a další výpočetní technika. Čištění, výměna komponent, instalace systému, datová záchrana, zrychlení výkonu.</p>
+                        <p>Počítače, notebooky a další výpočetní technika. Poskytujeme také servis u zákazníka doma či na provozovně.</p>
                     </div>
                 </article>
 
@@ -149,7 +152,7 @@
                 <li data-reveal>
                     <span class="step-num">1</span>
                     <h3>Přinesete zařízení</h3>
-                    <p>Stavte se na pobočce v Rumburku nebo nás předem kontaktujte telefonicky.</p>
+                    <p>Stavte se u nás na pobočce nebo nás předem kontaktujte telefonicky.</p>
                 </li>
                 <li data-reveal style="--reveal-delay: 100ms">
                     <span class="step-num">2</span>
@@ -164,7 +167,7 @@
                 <li data-reveal style="--reveal-delay: 300ms">
                     <span class="step-num">4</span>
                     <h3>Vyzvednutí</h3>
-                    <p>Dáme vědět, jakmile je hotovo. Platíte až při převzetí funkčního zařízení.</p>
+                    <p>Dáme vědět, jakmile je hotovo a zařízení je připraveno k vyzvednutí.</p>
                 </li>
             </ol>
         </div>
@@ -175,7 +178,7 @@
             <div class="split">
                 <div class="split-text" data-reveal>
                     <span class="eyebrow">O nás</span>
-                    <h2>Lokální IT servis s přístupem člověka, ne korporace</h2>
+                    <h2>Lokální servis s prodejnou nového i použitého zboží</h2>
                     <p>Firma PcObchod je tu pro Vás již přes 20 let – v Rumburku máme pobočku otevřenou od roku 2008 a ve Varnsdorfu od roku 2012. Pomáháme lidem ze Šluknovského výběžku s jejich počítači, notebooky a mobilními telefony.</p>
                     <p>Původně jsme provozovali e-shop s počítačovou technikou. Postupně jsme zjistili, že lidé v regionu potřebují především spolehlivý servis – někoho, komu mohou přinést rozbitý mobil nebo pomalý notebook a dostanou férovou cenu i lidský přístup.</p>
                     <p>Dnes se věnujeme výhradně opravám a IT podpoře. Děláme to, co umíme nejlépe.</p>
@@ -343,8 +346,10 @@
                         <span>Typ zařízení</span>
                         <select name="device">
                             <option value="">Vyberte…</option>
-                            <option>iPhone / iPad</option>
+                            <option>Apple telefon</option>
                             <option>Android telefon</option>
+                            <option>Apple tablet</option>
+                            <option>Android tablet</option>
                             <option>Notebook</option>
                             <option>Stolní počítač</option>
                             <option>Herní konzole</option>
@@ -353,7 +358,7 @@
                     </label>
                     <label>
                         <span>Popis závady *</span>
-                        <textarea name="message" rows="5" required placeholder="Co se děje? Kdy to začalo? Spadlo zařízení, polilo se?"></textarea>
+                        <textarea name="message" rows="5" required placeholder="Co máte za problém? Kdy to začalo? Stačí krátký popis, my se Vám pak již ozveme a doladíme detaily."></textarea>
                     </label>
                     <label class="check">
                         <input type="checkbox" required>
