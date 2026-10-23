@@ -180,16 +180,64 @@ p { color: var(--text-muted); }
 /* ---------- Hero notice (reconstruction banner) ---------- */
 .hero-notice {
     position: relative;
-    background: linear-gradient(140deg, #14141a 0%, #2a0608 55%, #4a0d10 100%);
+    background:
+        linear-gradient(140deg, #0f0f14 0%, #1f0608 48%, #3d0a0c 100%);
     color: #fff;
     border-radius: var(--radius-xl, 24px);
-    padding: 2rem 2.1rem 2rem;
+    padding: 1.75rem 1.9rem 1.9rem;
     overflow: hidden;
     isolation: isolate;
-    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04) inset;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.05) inset;
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 1rem;
+}
+
+/* Yellow-black construction stripe along the top */
+.notice-stripes {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffcc00 0 14px,
+        #0a0a0e 14px 28px
+    );
+    opacity: 0.95;
+}
+
+/* Decorative blobs */
+.notice-blobs { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+.notice-blobs .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.55;
+}
+.notice-blobs .b1 {
+    width: 220px; height: 220px;
+    top: -60px; right: -60px;
+    background: radial-gradient(circle, rgba(230,58,60,0.9), transparent 70%);
+    animation: blob-float 9s ease-in-out infinite;
+}
+.notice-blobs .b2 {
+    width: 180px; height: 180px;
+    bottom: -40px; left: -40px;
+    background: radial-gradient(circle, rgba(255,180,60,0.5), transparent 70%);
+    animation: blob-float 11s ease-in-out infinite -3s;
+}
+.notice-blobs .b3 {
+    width: 140px; height: 140px;
+    top: 50%; right: 10%;
+    background: radial-gradient(circle, rgba(200,24,26,0.6), transparent 70%);
+    animation: blob-float 8s ease-in-out infinite -5s;
+}
+@keyframes blob-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(14px, -18px) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .notice-blobs .blob, .notice-tape span { animation: none; }
 }
 .notice-glow {
     position: absolute;
@@ -212,36 +260,124 @@ p { color: var(--text-muted); }
     z-index: -1;
     opacity: 0.6;
 }
+.notice-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.4rem;
+}
+.notice-tools {
+    display: inline-flex;
+    gap: 0.3rem;
+    color: #fff;
+    opacity: 0.9;
+}
+.notice-tools .tool {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.notice-tools .tool-hammer { color: #ffd166; transform: rotate(-6deg); }
+.notice-tools .tool-wrench { color: #ffffff; transform: rotate(4deg); }
+.notice-tools .tool-cone { color: #ff8a3d; transform: rotate(-3deg); }
+
 .notice-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    align-self: flex-start;
-    padding: 0.45rem 0.85rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 0.85rem 0.4rem 0.7rem;
+    background: var(--primary);
     border-radius: 999px;
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #fff;
-    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px -4px rgba(200, 24, 26, 0.6);
 }
-.notice-badge svg {
-    width: 14px;
-    height: 14px;
-    color: var(--primary-light);
+.notice-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: notice-pulse 1.6s ease-out infinite;
 }
+@keyframes notice-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
 .notice-title {
     font-family: "Plus Jakarta Sans", "Inter", sans-serif;
     color: #fff;
-    font-size: clamp(1.5rem, 2.4vw, 2rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
 }
+.notice-title .title-small {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.5rem;
+}
+.notice-title .title-big {
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    background: linear-gradient(180deg, #fff 0%, #ffb0b2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(230, 58, 60, 0.25);
+}
+
+/* Marquee construction tape */
+.notice-tape {
+    position: relative;
+    overflow: hidden;
+    background: #ffcc00;
+    color: #0a0a0e;
+    border-radius: 6px;
+    padding: 0.4rem 0;
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    transform: rotate(-1.2deg);
+    box-shadow: 0 4px 14px -4px rgba(255, 204, 0, 0.4);
+    margin: 0.1rem -0.4rem 0.3rem;
+}
+.notice-tape::before, .notice-tape::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 36px;
+    pointer-events: none;
+    z-index: 2;
+}
+.notice-tape::before { left: 0; background: linear-gradient(90deg, #ffcc00, transparent); }
+.notice-tape::after { right: 0; background: linear-gradient(-90deg, #ffcc00, transparent); }
+.notice-tape span {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: tape-scroll 18s linear infinite;
+}
+@keyframes tape-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 .notice-text {
     color: rgba(255, 255, 255, 0.82);
     font-size: 0.98rem;
