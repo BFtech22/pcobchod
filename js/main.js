@@ -131,3 +131,15 @@
         }, 4500);
     });
 })();
+
+/* Odpočet do startu EET 2.0 v banneru v úvodu */
+(function () {
+    var cislo = document.getElementById('eet-dni');
+    if (!cislo) return;
+    var dni = Math.ceil((new Date(2027, 0, 1) - new Date()) / 864e5);
+    if (dni <= 0) return;
+    cislo.textContent = dni;
+    var jednotka = document.getElementById('eet-dni-jednotka');
+    if (jednotka) jednotka.textContent = dni === 1 ? 'den' : (dni <= 4 ? 'dny' : 'dní');
+    cislo.closest('.hero-eet-odpocet').hidden = false;
+})();

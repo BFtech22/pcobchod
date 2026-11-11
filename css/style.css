@@ -377,36 +377,6 @@ p { color: var(--text-muted); }
     height: 3px;
     background: var(--grad-primary);
 }
-.hero-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-.hero-meta li {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.95rem 0;
-    border-bottom: 1px solid var(--border);
-}
-.hero-meta li:last-child { border-bottom: 0; }
-.hero-meta strong {
-    font-size: 1.65rem;
-    color: var(--text);
-    font-weight: 800;
-    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
-    letter-spacing: -0.02em;
-    background: var(--grad-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.hero-meta span {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    text-align: right;
-}
 
 /* ---------- Sections ---------- */
 .section { padding: 4rem 0; position: relative; }
@@ -1116,10 +1086,66 @@ p { color: var(--text-muted); }
     .hero { padding: 2.5rem 0 3rem; }
     .section { padding: 3rem 0; }
     .grid-4, .grid-3, .grid-services, .steps, .form-row { grid-template-columns: 1fr; }
-    .hero-meta { gap: 0; flex-wrap: wrap; padding-top: 1.5rem; }
-    .hero-meta li { padding: 0 1.25rem; }
     .cta-box { padding: 2rem; flex-direction: column; align-items: flex-start; text-align: left; }
     .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
     .branch-card { padding: 1.75rem; }
     .form { padding: 1.75rem; }
 }
+
+/* ---------- Banner EET 2.0 v úvodu (eet-systems.cz) ---------- */
+.hero-eet {
+    background:
+        radial-gradient(120% 85% at 100% 0%, rgba(200, 24, 26, 0.38), transparent 58%),
+        var(--grad-dark);
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+    color: #fff;
+    padding: 1.6rem 1.75rem 1.75rem;
+}
+.hero-eet-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+.hero-eet-top img { height: 50px; width: auto; }
+.hero-eet-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f0585a;
+    background: rgba(240, 88, 90, 0.14);
+    border: 1px solid rgba(240, 88, 90, 0.35);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.hero-eet-title {
+    color: #fff;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin: 1.1rem 0 0.6rem;
+}
+.hero-eet-title span { display: block; color: #f0585a; }
+.hero-eet-text {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.93rem;
+    line-height: 1.55;
+    margin: 0 0 1rem;
+}
+.hero-eet-odpocet {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    margin: 0 0 1.1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+.hero-eet-odpocet[hidden] { display: none; }
+.hero-eet-odpocet strong {
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+.hero-eet-btn { width: 100%; }

@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261111-1">
 </head>
 <body>
     <header class="header">
@@ -60,12 +60,18 @@
                     </a>
                 </div>
             </div>
-            <aside class="hero-aside" data-reveal style="--reveal-delay: 120ms">
-                <ul class="hero-meta">
-                    <li><strong>20+</strong> <span>let zkušeností</span></li>
-                    <li><strong>do 24h</strong> <span>expresní servis</span></li>
-                    <li><strong>98 %</strong> <span>spokojených klientů</span></li>
-                </ul>
+            <aside class="hero-aside hero-eet" data-reveal style="--reveal-delay: 120ms" aria-label="EET 2.0 – EET Systems">
+                <div class="hero-eet-top">
+                    <img src="img/eet-systems-logo.svg" alt="EET Systems" width="478" height="259">
+                    <span class="hero-eet-pill">EET 2.0 · od 1. 1. 2027</span>
+                </div>
+                <h2 class="hero-eet-title">EET je zpět. <span>Připravíme vaši pokladnu.</span></h2>
+                <p class="hero-eet-text">Pomůžeme s registrací v DIS+, pokladním certifikátem, pokladnou i servisem. EET děláme od roku 2016.</p>
+                <p class="hero-eet-odpocet" hidden>Start EET 2.0 za <strong id="eet-dni">51</strong> <span id="eet-dni-jednotka">dní</span></p>
+                <a href="https://eet-systems.cz/" class="btn btn-primary hero-eet-btn" target="_blank" rel="noopener">
+                    Více na eet-systems.cz
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
             </aside>
         </div>
     </section>
@@ -419,6 +425,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20261111-1"></script>
 </body>
 </html>
